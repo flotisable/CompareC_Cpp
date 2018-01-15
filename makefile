@@ -17,5 +17,8 @@ $(CXXPROG_UNSYNC): CXXFLAGS += -DIOS_UNSYNC
 $(CXXPROG_UNSYNC): testCpp.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
+logToTable: logToTable.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $<
+
 clean:
 	rm $(CPROG) $(CXXPROG) $(CXXPROG_UNSYNC)
