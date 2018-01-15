@@ -20,17 +20,17 @@ int main()
 
   while( !cin.eof() )
   {
-    for( int i = 0 ; i < table.size() ; ++i )
-       for( int j = 0 ; j < table[i].size() ; ++j )
+    for( int col = 0 ; col < colNum ; ++col )
+       for( int row = 0 ; row < rowNum ; ++row )
        {
-          if( i == 0 && j % 2 == 1 ) continue;
+          if( row == 0 && col % 2 == 1 ) continue;
 
           string buffer;
 
           getline( cin, buffer );
           if( cin.eof() ) return 0;
 
-          table[i][j] = buffer;
+          table[row][col] = buffer;
        }
     cout << "|                       | C        |             | C++      |             | C++ unsync |             |\n";
     cout << "|-----------------------+----------+-------------+----------+-------------+------------+-------------|\n";
